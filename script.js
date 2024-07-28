@@ -1,4 +1,8 @@
-import axios from 'axios'
+import axios from 'axios';
+import Quote from 'inspirational-quotes';
+import { getCountryCode, getCountryData, getCountryDataList, getEmojiFlag } from 'countries-list'
+
+
 
 // let imgs = document.querySelector('img')
 // let aa= document.createElement('button');
@@ -25,3 +29,9 @@ import axios from 'axios'
 let a=5
 a+=5
 console.log(a)
+
+console.log(Quote.getQuote().text);
+let quotes=document.createElement('p').innerText=Quote.getQuote().text
+document.body.append(quotes)
+
+console.log(getCountryCode('Ukraine'));
